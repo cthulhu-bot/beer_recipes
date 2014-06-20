@@ -45,18 +45,37 @@ describe('clicking the remove button', function() {
 
 describe('adding an amount to an ingredient and hitting enter', function() {
     it('saves the amount and converts it to a text field', function() {
-    });
-});
+        // given
+        var context = $('body');
+        $('#ingredients').nextAll().remove();
+        Ingredient.add(context,'paprika');
+        
 
-describe('mousing over the ingredient', function() {
-    it('highlights the row', function() {
+        // when
+        
+
+        // then
     });
 });
 
 describe('double clicking the ingredient row', function() {
     it('converts the amount text into an input field', function() {
+        // given
+        var context = $('body');
+        $('#ingredients').nextAll().remove();
+
+        // when
+
+        // then
     });
 
     it('retains the original text value', function() {
+        // given
+        var context = $('body');
+        $('#ingredients').nextAll().remove();
+
+        // when
+
+        // then
     });
 });
