@@ -1,4 +1,5 @@
 Ingredient = {}
+Amount = {}
 
 var ingredientHead = ('<div class="row" id="row"><p>').concat('<input type="button" id="removeRow" value="X">');
 var ingredientAmount = ('<input type="text" class="amt" id="amount">');
@@ -9,6 +10,14 @@ Ingredient.add = function(context, data) {
 
 Ingredient.remove = function(context) {
     $(context).closest('div.row').remove();
+}
+
+Amount.add = function(context, e) {
+    if (e.keyCode == 13) {
+        var amount = $(context).closest('#amount').val();
+        var amountText = ('<span class="amt">').concat(amount).concat('</span>');
+        $(context).closest('#amount').replaceWith(amountText);
+    }
 }
 
 $('#new').click(function() {
@@ -27,9 +36,5 @@ $('body').on('mouseout', 'div.row', function() {
 });
 
 $('body').on('keydown','#amount',function(e) {
-    if (e.keyCode == 13) {
-        var amount = $(this).closest('#amount').val();
-        var amountText = ('<span class="amt">').concat(amount).concat('</span>');
-        $(this).closest('#amount').replaceWith(amountText);
-    }
+    Amount.add(this, e);
 });

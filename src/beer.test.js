@@ -49,10 +49,8 @@ describe('adding an amount to an ingredient and hitting enter', function() {
         var context = $('body');
         $('#ingredients').nextAll().remove();
         Ingredient.add(context,'paprika');
-        
 
         // when
-        
 
         // then
     });
