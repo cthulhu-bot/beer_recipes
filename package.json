@@ -2,9 +2,10 @@
   "name": "Beer",
   "version": "0.0.0",
   "description": "Beer!",
+  "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cthulhu-bot/beer"
+    "url": "https://github.com/cthulhu-bot/beer_recipes"
   },
   "author": "Josh Stupplebeen",
   "devDependencies": {
