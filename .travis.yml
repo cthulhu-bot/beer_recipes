@@ -8,3 +8,4 @@ deploy:
   provider: heroku
   api_key: 8adab5cab768a0df58cd6276ee0db2bae927064e
   app:  beer_recipes
+  strategy: git
