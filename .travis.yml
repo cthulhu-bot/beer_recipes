@@ -6,5 +6,5 @@ before_install:
   - npm install grunt-contrib-jasmine --save-dev
 deploy:
   provider: heroku
-  api_key: 8adab5cab768a0df58cd6276ee0db2bae927064e
   app: beer-recipes
+  api_key: 8adab5cab768a0df58cd6276ee0db2bae927064e
