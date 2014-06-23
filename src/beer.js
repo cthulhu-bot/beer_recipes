@@ -1,5 +1,6 @@
 Ingredient = {}
 Amount = {}
+Save = {}
 
 var ingredientHead = ('<div class="row" id="row"><p>').concat('<input type="button" id="removeRow" value="X">');
 var ingredientAmount = ('<input type="text" class="amt" id="amount">');
@@ -24,6 +25,28 @@ Amount.remove = function(context) {
         var amountInput = '<input type="text" class="amt" id="amount" value="' + amount + '">';
         $(amt).replaceWith(amountInput);
     }
+}
+
+Save.RoundFunction = function(input) {
+    return ((1369 * input + 150889) % 714025) / 714025.0;
+}
+
+Save.PermuteId = function(id) {
+    var l1=(id >> 16) & 65535;
+    var r1=id & 65535;
+    var l2, r2;
+    for (var i = 0; i < 3; i++)
+    {
+        l2 = r1;
+        r2 = l1 ^ (Save.RoundFunction(r1) * 65535);
+        l1 = l2;
+        r1 = r2;
+    }
+    return ((r1 << 16) + l1);
+}
+
+Save.GenerateCode(id) {
+    return Save.PermuteId(id);
 }
 
 $('#new').click(function() {
