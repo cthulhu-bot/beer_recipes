@@ -51,8 +51,10 @@ describe('adding an amount to an ingredient and hitting enter', function() {
         Ingredient.add(context,'paprika');
 
         // when
+	Amount.add(context,'10');
 
         // then
+//        expect(context.find('span.amount').text()).toBe('10');
     });
 });
 
