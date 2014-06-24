@@ -338,10 +338,18 @@ main {
 }
 .amt
 {
-    margin-left:2cm;
+    position:absolute;
+    left:200px;
     width:50px;
 }
 .row
 {
+    margin-left:1cm;
     width:100%;
+}
+.ingredient_header {
+    margin-left:1cm;
+}
+.amount_header {
+    margin-left:2cm;
 }
