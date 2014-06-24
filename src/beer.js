@@ -38,14 +38,14 @@ Save.PermuteId = function(id) {
     for (var i = 0; i < 3; i++)
     {
         l2 = r1;
-        r2 = l1 ^ (Save.RoundFunction(r1) * 65535);
+        r2 = l1 ^ (Save.RoundFunction(r1) * 16383);
         l1 = l2;
         r1 = r2;
     }
     return ((r1 << 16) + l1);
 }
 
-Save.GenerateCode(id) {
+Save.GenerateCode = function(id) {
     return Save.PermuteId(id);
 }
 
