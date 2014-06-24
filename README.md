@@ -1,12 +1,7 @@
-Todo:
-1.  FadeIn effect
+Learning Points:
+Didn't get a chance to implement the saving feature I wanted.  Given more time I wanted to be able to generate short guids (e.g. xTnvR) a la jsfiddle and save them in mongo as the key alongside the associated DOM object.
 
-2.  Possible SlickGrid
+App Info:
+TravisCI:       https://travis-ci.org/cthulhu-bot/beer_recipes
+Heroku Deploy:  http://beer-recipes.herokuapp.com/
 
-3.  GUID url like jsfiddle
-
-Info:
-
-http://beer-recipes.herokuapp.com/
-
-git@heroku.com:beer-recipes.git
